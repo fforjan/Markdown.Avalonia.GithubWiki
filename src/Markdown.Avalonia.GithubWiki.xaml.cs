@@ -16,6 +16,12 @@ namespace Markdown.Avalonia.GithubWiki
                 o => o.GitHubProject,
                 (o, v) => o.GitHubProject = v);
 
+        public static readonly AvaloniaProperty<string> RootPageProperty =
+            AvaloniaProperty.RegisterDirect<GithubWikiViewer, string>(
+                nameof(RootPage),
+                o => o.RootPage,
+                (o, v) => o.RootPage = v);
+
         private MDAv.MarkdownScrollViewer MDViewer;
         
 
@@ -34,7 +40,19 @@ namespace Markdown.Avalonia.GithubWiki
             set
             {
                 if(SetAndRaise(GitHubProjectProperty, ref gitHubProject, value)) {
-                    this.LoadPage($"https://raw.githubusercontent.com/wiki/{value}/Home.md");
+                    this.LoadPage(GetRootPage());
+                }
+            }
+        }
+
+        private string rootPage = "Home";
+        public string RootPage
+        {
+            get { return rootPage; }
+            set
+            {
+                if(SetAndRaise(RootPageProperty, ref rootPage, value)) {
+                    this.LoadPage(GetRootPage());
                 }
             }
         }
@@ -47,11 +65,19 @@ namespace Markdown.Avalonia.GithubWiki
             var contents = await response.Content.ReadAsStringAsync();
 
             this.MDViewer.Markdown = contents;
+            this.MDViewer.Engine.HyperlinkCommand = this.NavigateTo;
         }
 
+        private string GetRootPage() => GetPageUri(this.RootPage);
+
+        private string GetPageUri(string page) => $"https://raw.githubusercontent.com/wiki/{this.GitHubProject}/{page}.md";
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
+        }
+
+        private void NavigateTo(string page) {
+
         }
     }
 }
