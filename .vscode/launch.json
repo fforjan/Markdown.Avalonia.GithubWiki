@@ -10,9 +10,9 @@
              "request": "launch",
              "preLaunchTask": "build",
              // If you have changed target frameworks, make sure to update the program path.
-             "program": "${workspaceFolder}/samples/Markdown.Avalonia.GithubWiki.Sample/bin/Debug/netcoreapp3.0/Markdown.Avalonia.GithubWiki.Sample.dll",
+             "program": "${workspaceFolder}/samples/Markdown.Avalonia.GithubWiki.Sample/bin/Debug/netcoreapp3.1/Markdown.Avalonia.GithubWiki.Sample.dll",
              "args": [],
-             "cwd": "${workspaceFolder}/samples/Markdown.Avalonia.GithubWiki.Sample/bin/Debug/netcoreapp3.0/",
+             "cwd": "${workspaceFolder}/samples/Markdown.Avalonia.GithubWiki.Sample/bin/Debug/netcoreapp3.1/",
              // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
              "console": "internalConsole",
              "stopAtEntry": false
