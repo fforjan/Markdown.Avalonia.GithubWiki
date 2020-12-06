@@ -1,0 +1,9 @@
+/Users/GeoVah/Projects/Markdown.Avalonia.GitHubWiki/src/obj/Debug/netstandard2.0/Markdown.Avalonia.GithubWiki.csprojAssemblyReference.cache
+/Users/GeoVah/Projects/Markdown.Avalonia.GitHubWiki/src/obj/Debug/netstandard2.0/Markdown.Avalonia.GithubWiki.AssemblyInfoInputs.cache
+/Users/GeoVah/Projects/Markdown.Avalonia.GitHubWiki/src/obj/Debug/netstandard2.0/Markdown.Avalonia.GithubWiki.AssemblyInfo.cs
+/Users/GeoVah/Projects/Markdown.Avalonia.GitHubWiki/src/obj/Debug/netstandard2.0/Markdown.Avalonia.GithubWiki.csproj.CoreCompileInputs.cache
+/Users/GeoVah/Projects/Markdown.Avalonia.GitHubWiki/src/bin/Debug/netstandard2.0/Markdown.Avalonia.GithubWiki.deps.json
+/Users/GeoVah/Projects/Markdown.Avalonia.GitHubWiki/src/bin/Debug/netstandard2.0/Markdown.Avalonia.GithubWiki.dll
+/Users/GeoVah/Projects/Markdown.Avalonia.GitHubWiki/src/bin/Debug/netstandard2.0/Markdown.Avalonia.GithubWiki.pdb
+/Users/GeoVah/Projects/Markdown.Avalonia.GitHubWiki/src/obj/Debug/netstandard2.0/Markdown.Avalonia.GithubWiki.dll
+/Users/GeoVah/Projects/Markdown.Avalonia.GitHubWiki/src/obj/Debug/netstandard2.0/Markdown.Avalonia.GithubWiki.pdb

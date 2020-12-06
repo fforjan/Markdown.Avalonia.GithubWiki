@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "dgSpecHash": "GFFlEkXpBUUDG7tWCvBGxdYXB0id2REjP8NRFXhMndePMY5BO7A6FNaZ0Zwm4DrLJ4/9z14RtTJYXETbfMcveA==",
+  "success": true,
+  "projectFilePath": "/Users/GeoVah/Projects/Markdown.Avalonia.GitHubWiki/src/Markdown.Avalonia.GithubWiki.csproj",
+  "expectedPackageFiles": [
+    "/Users/GeoVah/.nuget/packages/avalonia/0.10.0-preview6/avalonia.0.10.0-preview6.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/avalonia.remote.protocol/0.10.0-preview6/avalonia.remote.protocol.0.10.0-preview6.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/jetbrains.annotations/10.3.0/jetbrains.annotations.10.3.0.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/markdown.avalonia/0.10.0-a3/markdown.avalonia.0.10.0-a3.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/system.buffers/4.4.0/system.buffers.4.4.0.nupkg.sha512",
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/system.componentmodel.annotations/4.5.0/system.componentmodel.annotations.4.5.0.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/system.numerics.vectors/4.4.0/system.numerics.vectors.4.4.0.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/system.reactive/4.4.1/system.reactive.4.4.1.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/system.runtime.compilerservices.unsafe/4.6.0/system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/system.runtime.interopservices.windowsruntime/4.3.0/system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/system.valuetuple/4.5.0/system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Markdown.Avalonia 0.10.0-a3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Markdown.Avalonia",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}
