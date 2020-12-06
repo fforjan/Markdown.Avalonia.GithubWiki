@@ -8,11 +8,11 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     defaults:
       run:
-        working-directory: /samples/Markdown.Avalonia.GithubWiki.Sample
+        working-directory: samples/Markdown.Avalonia.GithubWiki.Sample
 
     steps:
       - uses: actions/checkout@v2
