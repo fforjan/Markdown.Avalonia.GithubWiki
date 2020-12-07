@@ -90,7 +90,7 @@
           "lib/netstandard1.0/JetBrains.Annotations.dll": {}
         }
       },
-      "Markdown.Avalonia/0.10.0-a3": {
+      "Markdown.Avalonia/0.10.0-a4": {
         "type": "package",
         "dependencies": {
           "Avalonia": "0.10.0-preview6",
@@ -491,10 +491,10 @@
         "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/JetBrains.Annotations.xml"
       ]
     },
-    "Markdown.Avalonia/0.10.0-a3": {
-      "sha512": "1vobi1nPXe3+7MV/W8cVG0OqJw5/DjKOxzcPBAeV8hjKWgLeLpeaEa1ym/EyuJxhFGsVp3AI06+nJ8IgsjMmRg==",
+    "Markdown.Avalonia/0.10.0-a4": {
+      "sha512": "CWptv2GM8Es2vR1isZhgGMSkjsMUMIjjHP6BRzMT+k3zNZ9F9OpAhgSG9q8pYyY5L2nyzEkitqOUg84+GsXxxA==",
       "type": "package",
-      "path": "markdown.avalonia/0.10.0-a3",
+      "path": "markdown.avalonia/0.10.0-a4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -502,7 +502,7 @@
         "lib/net47/Markdown.Avalonia.dll",
         "lib/netcoreapp3.1/ColorTextBlock.Avalonia.dll",
         "lib/netcoreapp3.1/Markdown.Avalonia.dll",
-        "markdown.avalonia.0.10.0-a3.nupkg.sha512",
+        "markdown.avalonia.0.10.0-a4.nupkg.sha512",
         "markdown.avalonia.nuspec"
       ]
     },
@@ -1265,7 +1265,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Avalonia >= 0.10.0-preview6",
-      "Markdown.Avalonia >= 0.10.0-a3"
+      "Markdown.Avalonia >= 0.10.0-a4"
     ]
   },
   "packageFolders": {
@@ -1315,7 +1315,7 @@
           },
           "Markdown.Avalonia": {
             "target": "Package",
-            "version": "[0.10.0-a3, )"
+            "version": "[0.10.0-a4, )"
           }
         },
         "imports": [

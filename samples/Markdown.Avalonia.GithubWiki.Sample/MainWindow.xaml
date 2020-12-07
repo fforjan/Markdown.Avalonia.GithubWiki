@@ -6,6 +6,25 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Markdown.Avalonia.GithubWiki.Sample.MainWindow"
         Title="Markdown.Avalonia.GithubWiki.Sample">
-  <v:GithubWikiViewer  GitHubProject="fforjan/Markdown.Avalonia.GithubWiki" >
-  </v:GithubWikiViewer>
+  <TabControl>
+    <TabItem Header="Markdown.Avalonia.GithubWiki">
+      <v:GithubWikiViewer  GithubUserName="fforjan" GithubRepository="Markdown.Avalonia.GithubWiki" />
+    </TabItem>
+
+    <TabItem Header="Avalonia (same project)">
+      <v:GithubWikiViewer  GithubUserName="AvaloniaUI" GithubRepository="Avalonia" RootPage="Projects-that-are-using-Avalonia" SecurityMode="ProjectOnly" />
+    </TabItem>
+
+    <TabItem Header="Avalonia (same project and user content)">
+      <v:GithubWikiViewer  GithubUserName="AvaloniaUI" GithubRepository="Avalonia" RootPage="Projects-that-are-using-Avalonia" SecurityMode="SameProjectAndAnyUserContent" />
+    </TabItem>
+
+    <TabItem Header="Avalonia (all projects and user content)">
+      <v:GithubWikiViewer  GithubUserName="AvaloniaUI" GithubRepository="Avalonia" RootPage="Projects-that-are-using-Avalonia" SecurityMode="AllProjectsAndAnyUserContent" />
+    </TabItem>
+
+    <TabItem Header="Avalonia (all content)">
+      <v:GithubWikiViewer  GithubUserName="AvaloniaUI" GithubRepository="Avalonia" RootPage="Projects-that-are-using-Avalonia" SecurityMode="Anything" />
+    </TabItem>
+  </TabControl>
 </Window>

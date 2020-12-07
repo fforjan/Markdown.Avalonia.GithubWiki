@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "u2xAGcpDk56u4W04Jp5lgAcqMKCL0jii6Zsrhf/xwhqSFbSlbokxAGLqdC9ZmXXdRdq5RUPaUEGdBnBxuFYZWw==",
+  "dgSpecHash": "w78UjvOFJ8vBVtAjcyTmbRpPS8cc4Q3A2BgVLiDPhIm/hhy10xvU6OipE3z7Nb1KzMfXEXHNRHj4bjtx6Rjr6Q==",
   "success": true,
   "projectFilePath": "/Users/GeoVah/Projects/Markdown.Avalonia.GitHubWiki/src/Markdown.Avalonia.GithubWiki.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,7 @@
     "/Users/GeoVah/.nuget/packages/avalonia.markup.xaml.loader/0.10.0-preview6/avalonia.markup.xaml.loader.0.10.0-preview6.nupkg.sha512",
     "/Users/GeoVah/.nuget/packages/avalonia.remote.protocol/0.10.0-preview6/avalonia.remote.protocol.0.10.0-preview6.nupkg.sha512",
     "/Users/GeoVah/.nuget/packages/jetbrains.annotations/10.3.0/jetbrains.annotations.10.3.0.nupkg.sha512",
-    "/Users/GeoVah/.nuget/packages/markdown.avalonia/0.10.0-a3/markdown.avalonia.0.10.0-a3.nupkg.sha512",
+    "/Users/GeoVah/.nuget/packages/markdown.avalonia/0.10.0-a4/markdown.avalonia.0.10.0-a4.nupkg.sha512",
     "/Users/GeoVah/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/GeoVah/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/system.componentmodel.annotations/4.5.0/system.componentmodel.annotations.4.5.0.nupkg.sha512",

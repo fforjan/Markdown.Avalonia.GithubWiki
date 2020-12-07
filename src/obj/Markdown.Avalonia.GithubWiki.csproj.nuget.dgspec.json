@@ -47,7 +47,7 @@
             },
             "Markdown.Avalonia": {
               "target": "Package",
-              "version": "[0.10.0-a3, )"
+              "version": "[0.10.0-a4, )"
             }
           },
           "imports": [
