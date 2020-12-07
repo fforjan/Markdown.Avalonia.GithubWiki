@@ -69,7 +69,7 @@ namespace Markdown.Avalonia.GithubWiki
             get { return githubUserName; }
             set
             {
-                if (SetAndRaise(GithubUserNameProperty, ref githubUserName, value) && ConfigurationIsValid)
+                if (SetAndRaise(GithubUserNameProperty, ref githubUserName, value) && ConfigurationIsValid && isAttached)
                 {
                     this.LoadPage(GetRootPage());
                 }
@@ -82,10 +82,26 @@ namespace Markdown.Avalonia.GithubWiki
             get { return securityMode; }
             set
             {
-                if(SetAndRaise(SecurityModeProperty, ref securityMode, value)){
+                if (SetAndRaise(SecurityModeProperty, ref securityMode, value)&& ConfigurationIsValid && isAttached)
+                {
                     this.LoadPage(GetRootPage());
                 }
             }
+        }
+
+        protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
+        {
+            this.isAttached=true;
+            base.OnAttachedToVisualTree(e);
+            if(this.ConfigurationIsValid) {
+                this.LoadPage(GetRootPage());
+            }
+        }
+
+        protected override void OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs e)
+        {
+             this.isAttached=false;
+            base.OnDetachedFromVisualTree(e);
         }
 
         private string githubRepository;
@@ -94,7 +110,7 @@ namespace Markdown.Avalonia.GithubWiki
             get { return githubRepository; }
             set
             {
-                if (SetAndRaise(GithubRepositoryProperty, ref githubRepository, value) && ConfigurationIsValid)
+                if (SetAndRaise(GithubRepositoryProperty, ref githubRepository, value) && ConfigurationIsValid && isAttached)
                 {
                     this.LoadPage(GetRootPage());
                 }
@@ -102,34 +118,42 @@ namespace Markdown.Avalonia.GithubWiki
         }
 
         private string rootPage = "Home";
+        private bool isAttached;
+
         public string RootPage
         {
             get { return rootPage; }
             set
             {
-                if (SetAndRaise(RootPageProperty, ref rootPage, value) && ConfigurationIsValid)
+                if (SetAndRaise(RootPageProperty, ref rootPage, value) && ConfigurationIsValid && isAttached)
                 {
                     this.LoadPage(GetRootPage());
                 }
             }
         }
 
-        private bool ConfigurationIsValid {get {
-            return !string.IsNullOrEmpty(this.RootPage) 
-                    && !string.IsNullOrEmpty(this.GithubUserName)
-                    && !string.IsNullOrEmpty(this.GithubRepository);
-        }}
+        private bool ConfigurationIsValid
+        {
+            get
+            {
+                return !string.IsNullOrEmpty(this.RootPage)
+                        && !string.IsNullOrEmpty(this.GithubUserName)
+                        && !string.IsNullOrEmpty(this.GithubRepository);
+            }
+        }
 
         string IBitmapLoader.AssetPathRoot { set => defaultBitmapLoader.AssetPathRoot = value; }
 
-        private async Task LoadPage(string url)
+        private void LoadPage(string url)
         {
-            var httpClient = new HttpClient();
+            this.MDViewer.Markdown = Task.Run(async () =>
+            {
+                var httpClient = new HttpClient();
 
-            var response = await httpClient.GetAsync(url);
-            var contents = await response.Content.ReadAsStringAsync();
+                var response = await httpClient.GetAsync(url);
+                return await response.Content.ReadAsStringAsync();
 
-            this.MDViewer.Markdown = contents;
+            }).Result;
         }
 
         private string GetRootPage() => GetPageUri(this.RootPage);
