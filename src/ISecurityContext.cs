@@ -2,6 +2,7 @@ namespace Markdown.Avalonia.GithubWiki
 {
     public enum SecurityMode {
         ProjectOnly,
+        ProjectOnlyAndUserContent,
         SameProjectAndAnyUserContent,
         AllProjectsAndAnyUserContent,
         Anything

@@ -159,6 +159,9 @@ namespace Markdown.Avalonia.GithubWiki
         private string GetRootPage() => GetPageUri(this.RootPage);
 
         private string GetPageUri(string page) => $"https://raw.githubusercontent.com/wiki/{this.GithubUserName}/{this.GithubRepository}/{page}.md";
+
+        private string GetRelativeLinkUri(string relativeLink) => $"https://raw.githubusercontent.com/wiki/{this.GithubUserName}/{this.GithubRepository}/{relativeLink}";
+
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
@@ -186,6 +189,10 @@ namespace Markdown.Avalonia.GithubWiki
 
         Bitmap IBitmapLoader.Get(string urlTxt)
         {
+            if(Uri.TryCreate(urlTxt, UriKind.Relative, out var uri)) {
+                urlTxt  = this.GetRelativeLinkUri(urlTxt);
+            }
+
             if (this.CanDownload(urlTxt))
             {
                 return defaultBitmapLoader.Get(urlTxt);
