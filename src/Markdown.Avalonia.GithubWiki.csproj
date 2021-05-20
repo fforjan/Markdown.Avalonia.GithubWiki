@@ -4,7 +4,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.2" />
+    <PackageReference Include="Avalonia" Version="0.10.5" />
     <PackageReference Include="Markdown.Avalonia" Version="0.10.2" />
   </ItemGroup>
   <ItemGroup>
