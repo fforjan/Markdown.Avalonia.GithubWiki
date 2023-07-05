@@ -13,7 +13,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.20" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.20" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.0" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.20" />
   </ItemGroup>
   <ItemGroup>
