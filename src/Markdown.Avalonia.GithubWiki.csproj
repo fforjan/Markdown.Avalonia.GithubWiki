@@ -5,7 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.20" />
-    <PackageReference Include="Markdown.Avalonia" Version="0.10.14" />
+    <PackageReference Include="Markdown.Avalonia" Version="11.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="**\*.xaml.cs">
