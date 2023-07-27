@@ -14,7 +14,7 @@
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.20" />
     <PackageReference Include="Avalonia.Desktop" Version="0.10.20" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.20" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Markdown.Avalonia.GithubWiki.csproj" />
