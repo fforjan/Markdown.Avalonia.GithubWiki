@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markdown.Avalonia.GithubWiki", "src\Markdown.Avalonia.GithubWiki.csproj", "{5B9C632E-D3B1-4707-9B6F-CE78FC660FC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{08749266-CD52-4D7E-AA2E-E560DD3386E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markdown.Avalonia.GithubWiki.Sample", "samples\Markdown.Avalonia.GithubWiki.Sample\Markdown.Avalonia.GithubWiki.Sample.csproj", "{C33E30D4-536A-46AC-930D-41F5DF4A7AC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B9C632E-D3B1-4707-9B6F-CE78FC660FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9C632E-D3B1-4707-9B6F-CE78FC660FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9C632E-D3B1-4707-9B6F-CE78FC660FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9C632E-D3B1-4707-9B6F-CE78FC660FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33E30D4-536A-46AC-930D-41F5DF4A7AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33E30D4-536A-46AC-930D-41F5DF4A7AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33E30D4-536A-46AC-930D-41F5DF4A7AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33E30D4-536A-46AC-930D-41F5DF4A7AC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C33E30D4-536A-46AC-930D-41F5DF4A7AC8} = {08749266-CD52-4D7E-AA2E-E560DD3386E9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB9147F5-EF84-42AD-9140-690726A90C04}
+	EndGlobalSection
+EndGlobal

@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.0-rc1" />
-    <PackageReference Include="Markdown.Avalonia" Version="0.10.0-a9" />
+    <PackageReference Include="Avalonia" Version="11.0.10" />
+    <PackageReference Include="Markdown.Avalonia" Version="11.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="**\*.xaml.cs">

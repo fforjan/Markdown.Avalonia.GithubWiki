@@ -1,7 +1,6 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using Avalonia.Media.Imaging;
 using Markdown.Avalonia.Utils;
 using System;
 using System.Net.Http;
@@ -11,29 +10,28 @@ using MDAv = Markdown.Avalonia;
 
 namespace Markdown.Avalonia.GithubWiki
 {
-    public class GithubWikiViewer : UserControl, ICommand, IBitmapLoader, ISecurityContext
-    {
-        private readonly DefaultBitmapLoader defaultBitmapLoader = new DefaultBitmapLoader();
 
-        public static readonly AvaloniaProperty<string> GithubUserNameProperty =
+    public class GithubWikiViewer : UserControl, ICommand,  ISecurityContext
+    {
+        public static readonly DirectProperty<GithubWikiViewer,string> GithubUserNameProperty =
            AvaloniaProperty.RegisterDirect<GithubWikiViewer, string>(
                nameof(GithubUserName),
                o => o.GithubUserName,
                (o, v) => o.GithubUserName = v);
 
-        public static readonly AvaloniaProperty<SecurityMode> SecurityModeProperty =
+        public static readonly DirectProperty<GithubWikiViewer, SecurityMode> SecurityModeProperty =
            AvaloniaProperty.RegisterDirect<GithubWikiViewer, SecurityMode>(
                nameof(SecurityMode),
                o => o.SecurityMode,
                (o, v) => o.SecurityMode = v);
 
-        public static readonly AvaloniaProperty<string> GithubRepositoryProperty =
+        public static readonly DirectProperty<GithubWikiViewer,string> GithubRepositoryProperty =
             AvaloniaProperty.RegisterDirect<GithubWikiViewer, string>(
                 nameof(GithubRepository),
                 o => o.GithubRepository,
                 (o, v) => o.GithubRepository = v);
 
-        public static readonly AvaloniaProperty<string> RootPageProperty =
+        public static readonly DirectProperty<GithubWikiViewer,string> RootPageProperty =
             AvaloniaProperty.RegisterDirect<GithubWikiViewer, string>(
                 nameof(RootPage),
                 o => o.RootPage,
@@ -41,15 +39,13 @@ namespace Markdown.Avalonia.GithubWiki
 
         private MDAv.MarkdownScrollViewer MDViewer;
 
-
-
         public GithubWikiViewer()
         {
             InitializeComponent();
             this.MDViewer = this.Get<MDAv.MarkdownScrollViewer>("MDViewer");
 
             this.MDViewer.Engine.HyperlinkCommand = this;
-            this.MDViewer.Engine.BitmapLoader = this;
+            this.MDViewer.Plugins.PathResolver = new GithubPathResolver(this);
         }
 
         event System.EventHandler ICommand.CanExecuteChanged
@@ -142,8 +138,6 @@ namespace Markdown.Avalonia.GithubWiki
             }
         }
 
-        string IBitmapLoader.AssetPathRoot { set => defaultBitmapLoader.AssetPathRoot = value; }
-
         private void LoadPage(string url)
         {
             this.MDViewer.Markdown = Task.Run(async () =>
@@ -185,20 +179,6 @@ namespace Markdown.Avalonia.GithubWiki
                     this.LoadPage(this.GetPageUri(uri.OriginalString));
                 }
             }
-        }
-
-        Bitmap IBitmapLoader.Get(string urlTxt)
-        {
-            if(Uri.TryCreate(urlTxt, UriKind.Relative, out var uri)) {
-                urlTxt  = this.GetRelativeLinkUri(urlTxt);
-            }
-
-            if (this.CanDownload(urlTxt))
-            {
-                return defaultBitmapLoader.Get(urlTxt);
-            }
-
-            return null;
         }
     }
 }

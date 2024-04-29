@@ -6,10 +6,12 @@ namespace Markdown.Avalonia.GithubWiki
         private const string GitHubHostName = ".github.com";
         private const string GitHubUserContent = ".githubusercontent.com";
 
-        public static bool CanDownload(this ISecurityContext context, string urlTxt) {
+        public static bool CanDownload(this ISecurityContext context, string urlTxt, out Uri result) {
              if (!Uri.TryCreate((string)urlTxt, UriKind.Absolute, out var uri)) {
+                result = null;
                  return false;
              }
+             result = uri;
 
             switch(context.SecurityMode) {
                 case SecurityMode.ProjectOnly:
