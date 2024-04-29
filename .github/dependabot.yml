@@ -9,3 +9,7 @@ updates:
     directory: "/samples/Markdown.Avalonia.GithubWiki.Sample" # Location of package manifests
     schedule:
       interval: "daily"
+    groups:
+      avalonia:
+         patterns:
+          - "avalonia*"
