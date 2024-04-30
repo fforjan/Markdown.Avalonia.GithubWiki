@@ -15,11 +15,11 @@ jobs:
         working-directory: samples/Markdown.Avalonia.GithubWiki.Sample
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@3
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '8.0.x'
       - name: Install dependencies
         run: dotnet restore
       - name: Build
