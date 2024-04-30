@@ -15,7 +15,7 @@ jobs:
         working-directory: samples/Markdown.Avalonia.GithubWiki.Sample
 
     steps:
-      - uses: actions/checkout@3
+      - uses: actions/checkout@v4
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
